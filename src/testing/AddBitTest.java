@@ -21,5 +21,21 @@ public class AddBitTest{
 			}
 		}
 		
+		System.out.println("Testin the Full adder");
+		
+		int[] full ;//= BinaryAdder.addBits(1, 1);
+		int cin = 0;
+		int[] from;
+		for(int i=0;i<2;i++){
+			
+			for(int j=0;j<2;j++){
+				from = BinaryAdder.addBits(i, j);
+				
+				full = BinaryAdder.fullAdder(from, cin);
+				cin = full[0];
+				System.out.println("Carry: " + full[0] + " and Sum is " +full[1]);
+			}
+		}
+		
 	}
 }
